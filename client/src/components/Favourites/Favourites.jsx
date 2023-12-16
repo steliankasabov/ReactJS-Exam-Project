@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import * as favouriteService from '../../services/favouriteService';
-import MovieCard from '../MovieCard/MovieCard';
+import PlayCard from '../PlayCard/PlayCard';
 import styles from './Favourites.module.css';
 import { toast } from 'react-toastify';
 import AuthContext from '../../contexts/authContext';
@@ -37,13 +37,13 @@ export default function Favourites() {
         if (sortCriterion === '_createdOn') {
             return b._createdOn - a._createdOn;
         } else if (sortCriterion === 'title') {
-            return a.movie.title.localeCompare(b.movie.title);
+            return a.play.title.localeCompare(b.play.title);
         } else if (sortCriterion === 'year') {
-            return a.movie.year - b.movie.year;
+            return a.play.year - b.play.year;
         } else if (sortCriterion === 'startTime') {
-            return new Date(a.movie.startTime) - new Date(b.movie.startTime);
+            return new Date(a.play.startTime) - new Date(b.play.startTime);
         } else if (sortCriterion === 'price') {
-            return a.movie.price - b.movie.price;
+            return a.play.price - b.play.price;
         }
     });
 
@@ -65,16 +65,16 @@ export default function Favourites() {
                     <option value="price">Price</option>
                 </select>
             </div>
-            <div className={styles.moviesGrid}>
+            <div className={styles.playGrid}>
                 {isLoading ? (
                     <Spinner />
                 ) : (
                     favourites.length === 0 ? (
-                        <p className={styles.noFavourites}>You have no favourite movies.</p>
+                        <p className={styles.noFavourites}>You have no favourite plays.</p>
                     ) : (
                         sortedFavourites.map(favourite => (
-                            <div key={favourite.movie._id} className={styles.movieCardWrapper}>
-                                <MovieCard movie={favourite.movie} />
+                            <div key={favourite.play._id} className={styles.playCardWrapper}>
+                                <PlayCard play={favourite.play} />
                                 <button
                                     className={styles.removeFavouriteButton}
                                     onClick={() => showDeleteModal(favourite._id)}>

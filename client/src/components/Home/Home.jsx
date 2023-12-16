@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import MovieCarousel from '../../components/MovieCarousel/MovieCarousel';
+import PlayCarousel from '../../components/PlayCarousel/PlayCarousel';
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
 
       <h2 className={styles.upcomingShowingsTitle}>Upcoming Shows:</h2>
     
-      <MovieCarousel />
+      <PlayCarousel />
 
       <div className={styles.descriptionHome}>
 

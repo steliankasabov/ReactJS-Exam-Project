@@ -17,7 +17,7 @@
     color: #555;
 }
 
-.moviesGrid {
+.playGrid {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -26,7 +26,7 @@
     padding: 20px;
 }
 
-.movieCardWrapper {
+.playCardWrapper {
     position: relative;
     flex-direction: column;
     display: flex;

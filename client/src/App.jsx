@@ -4,9 +4,9 @@ import {
   Route
 } from 'react-router-dom';
 import Home from './components/Home/Home';
-import Movies from './components/Movies/Movies';
+import Plays from './components/Plays/Plays';
 import NotFound from './components/NotFound/NotFound';
-import MovieDetails from './components/MovieDetails/MovieDetails'
+import PlayDetails from './components/PlayDetails/PlayDetails'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
@@ -30,11 +30,11 @@ function App() {
           <ToastContainer />
           <Routes>
             <Route path={PATHS.HOME} element={<Home />} />
-            <Route path={PATHS.MOVIES} element={<Movies />} />
-            <Route path={`${PATHS.MOVIES}/:movieId`} element={<MovieDetails />} />
+            <Route path={PATHS.PLAYS} element={<Plays />} />
+            <Route path={`${PATHS.PLAYS}/:playId`} element={<PlayDetails />} />
             <Route path={PATHS.RESERVATIONS} element={<ProtectedRoute><Reservations /></ProtectedRoute>} />
             <Route path={PATHS.FAVOURITES} element={<ProtectedRoute><Favourites /></ProtectedRoute>} />
-            <Route path={`${PATHS.MOVIES}/:movieId${PATHS.BOOKING}`} element={<ProtectedRoute><Booking /></ProtectedRoute>} />
+            <Route path={`${PATHS.PLAYS}/:playId${PATHS.BOOKING}`} element={<ProtectedRoute><Booking /></ProtectedRoute>} />
             <Route path={PATHS.LOGIN} element={<GuestRoute><Login /></GuestRoute>} />
             <Route path={PATHS.REGISTER} element={<GuestRoute><Register /></GuestRoute>} />
             <Route path={PATHS.LOGOUT} element={<ProtectedRoute><Logout /></ProtectedRoute>} />

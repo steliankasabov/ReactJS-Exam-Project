@@ -3,9 +3,9 @@ import * as request from "../lib/request"
 
 const baseUrl = `${API_BASE_URL}/favourites`;
 
-export const getFavourite = async (userId, movieId) => {
+export const getFavourite = async (userId, playId) => {
     const query = new URLSearchParams({
-        where: `movieId="${movieId}"`,
+        where: `playId="${playId}"`,
     });
     const result = await request.get(`${baseUrl}?${query} AND _ownerId%3D"${userId}"`);
     return result.length > 0 ? result[0] : null;
@@ -22,7 +22,7 @@ export const deleteFavourite = async (favouriteId) => {
 export const getFavourites = async (userId) => {
     const query = new URLSearchParams({
         where: `_ownerId="${userId}"`,
-        load: `movie=movieId:movies`,
+        load: `play=playId:plays`,
     });
     return await request.get(`${baseUrl}?${query}`);
 }

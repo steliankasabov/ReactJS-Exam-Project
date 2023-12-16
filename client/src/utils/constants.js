@@ -3,7 +3,7 @@ export const USERS_BASE_URL = "http://localhost:3030/users";
 
 export const PATHS = {
     HOME: "/",
-    MOVIES: "/movies",
+    PLAYS: "/plays",
     RESERVATIONS: "/reservations",
     FAVOURITES: "/favourites",
     BOOKING: "/booking",

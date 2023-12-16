@@ -10,7 +10,7 @@ import { REVIEWS_PER_PAGE } from "../../utils/constants";
 import useDeleteModal from "../../hooks/useDeleteModal";
 
 export default function ReviewArea() {
-    const { movieId } = useParams();
+    const { playId } = useParams();
     const [reviewText, setReviewText] = useState('');
     const [reviews, setReviews] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -22,16 +22,16 @@ export default function ReviewArea() {
 
 
     useEffect(() => {
-        reviewService.getReviewsCount(movieId)
+        reviewService.getReviewsCount(playId)
             .then(result => setReviewsCount(result))
             .catch(err => toast.error(err))
-    }, [movieId])
+    }, [playId])
 
     useEffect(() => {
-        reviewService.getMovieReviews(movieId, (currentPage - 1) * reviewsPerPage, reviewsPerPage)
+        reviewService.getPlayReviews(playId, (currentPage - 1) * reviewsPerPage, reviewsPerPage)
             .then(result => setReviews(result))
             .catch(err => toast.error(err))
-    }, [movieId, currentPage, reviewsPerPage, updatePage])
+    }, [playId, currentPage, reviewsPerPage, updatePage])
 
     const onSubmitReview = async () => {
         if (!reviewText.trim()) {
@@ -39,7 +39,7 @@ export default function ReviewArea() {
         }
         try {
             const reviewData = {
-                movieId: movieId,
+                playId: playId,
                 text: reviewText,
             };
             const review = await reviewService.addReview(reviewData);

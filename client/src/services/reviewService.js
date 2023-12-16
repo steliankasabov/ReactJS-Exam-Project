@@ -3,9 +3,9 @@ import { API_BASE_URL } from "../utils/constants";
 
 const baseUrl = `${API_BASE_URL}/reviews`;
 
-export const getMovieReviews = async (movieId, skip, take) => {
+export const getPlayReviews = async (playId, skip, take) => {
     const query = new URLSearchParams({
-        where: `movieId="${movieId}"`,
+        where: `playId="${playId}"`,
         load: `owner=_ownerId:users`,
         offset: `${skip}`,
         pageSize: `${take}`,
@@ -23,9 +23,9 @@ export const deleteReview = async (reviewId) => {
     await request.remove(`${baseUrl}/${reviewId}`)
 }
 
-export const getReviewsCount = async (movieId) => {
+export const getReviewsCount = async (playId) => {
     const query = new URLSearchParams({
-        where: `movieId="${movieId}"`,
+        where: `playId="${playId}"`,
     });
     return await request.get(`${baseUrl}?${query}&count`)
 }

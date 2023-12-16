@@ -7,8 +7,8 @@ export const addReservation = async (reservationData) => {
     await request.post(baseUrl, reservationData);
 };
 
-export const getMovieSeats = async (movieId) => {
-    const result = await request.get(`${baseUrl}?where=movieId%3D"${movieId}"`);
+export const getPlaySeats = async (playId) => {
+    const result = await request.get(`${baseUrl}?where=playId%3D"${playId}"`);
 
     return result.reduce((acc, reservation) => {
         if (reservation.seats && Array.isArray(reservation.seats)) {
@@ -21,7 +21,7 @@ export const getMovieSeats = async (movieId) => {
 export const getReservations = async (userId) => {
     const query = new URLSearchParams({
         where: `_ownerId="${userId}"`,
-        load: `movie=movieId:movies`,
+        load: `play=playId:plays`,
         sortBy: `_createdOn`,
     });
     return await request.get(`${baseUrl}?${query} desc`);

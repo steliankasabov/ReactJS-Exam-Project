@@ -17,7 +17,7 @@ export default function Header() {
             <Link to={PATHS.HOME}><img className={styles.logo} src="/logo.png" alt="Sofia Park Theatre" /></Link>
             <div className={styles.navLeft}>
                 <Link to={PATHS.HOME}>Sofia Park Theatre Festival</Link>
-                <Link to={PATHS.MOVIES}>Programme</Link>
+                <Link to={PATHS.PLAYS}>Programme</Link>
             </div>
             <div className={styles.navRight}>
                 {isAuthenticated ? (

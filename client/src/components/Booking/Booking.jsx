@@ -6,11 +6,11 @@ import { TOTAL_ROWS, SEATS_PER_ROW, MAX_SEATS, PATHS } from '../../utils/constan
 import { toast } from 'react-toastify';
 import { useNavigate, useParams } from 'react-router-dom';
 import * as reservationService from '../../services/reservationService'
-import * as movieService from '../../services/movieService'
+import * as playService from '../../services/playService'
 import Spinner from '../Spinner/Spinner';
 
 export default function Booking() {
-    const { movieId } = useParams();
+    const { playId } = useParams();
     const [price, setPrice] = useState(0);
     const [reservedSeats, setReservedSeats] = useState([]);
     const [selectedSeats, setSelectedSeats] = useState([]);
@@ -19,16 +19,16 @@ export default function Booking() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        movieService.getOne(movieId)
+        playService.getOne(playId)
             .then(result => setPrice(result.price))
             .catch(err => toast.error(err))
-    }, [movieId]);
+    }, [playId]);
 
     useEffect(() => {
         setIsLoading(true)
         const fetchReservations = async () => {
             try {
-                const distinctSeats = await reservationService.getMovieSeats(movieId);
+                const distinctSeats = await reservationService.getPlaySeats(playId);
                 setReservedSeats(distinctSeats);
                 setIsLoading(false);
             } catch (error) {
@@ -40,7 +40,7 @@ export default function Booking() {
         };
 
         fetchReservations();
-    }, [movieId]);
+    }, [playId]);
 
     const isSeatReserved = (seatId) => reservedSeats.includes(seatId);
     const isSeatSelected = (seatId) => selectedSeats.includes(seatId);
@@ -101,7 +101,7 @@ export default function Booking() {
     const handleReservation = async () => {
         try {
             const reservationData = {
-                movieId: movieId,
+                playId: playId,
                 seats: selectedSeats,
                 totalPrice: totalPrice
             };
