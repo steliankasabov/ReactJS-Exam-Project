@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+.welcomeImg {
+text-align: center;
+}
+
+.welcomeTitle {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcomeTitle img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+.welcomeDescription {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #bf9f00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.upcomingShowingsTitle {
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 700 !important;
+    font-size: 3rem !important;
+    color: #1a3300;
+}
+
+.header {
+    background-color: #1d3604 !important;
+}
+
+.descriptionHome {
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+}

@@ -1,0 +1,62 @@
+.favouritesPage {
+    color: #1a3300;
+    min-height: 90vh;
+    padding: 20px 100px;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    color: #1a3300;
+    margin-bottom: 20px;
+}
+
+.noFavourites {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.moviesGrid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.movieCardWrapper {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+}
+
+.removeFavouriteButton {
+    background-color: #bf9f00;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.sortContainer {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.sortContainer select {
+    margin-left: 10px;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}

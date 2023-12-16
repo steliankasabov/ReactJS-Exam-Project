@@ -1,0 +1,73 @@
+.bookingContainer {
+    text-align: center;
+  }
+  
+  .screenLabel {
+    background-color: #ddd;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    width: 80%;
+  }
+  
+  .seatRow {
+    margin-bottom: 10px;
+  }
+
+  .seatsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .seat {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightgray;
+    display: flex;
+    color: green;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .reservedSeat {
+    color: red;
+    cursor: default;
+  }
+  
+  .selectedSeat {
+    color: #bf9f00;
+  }
+
+  .selectSeatsLabel {
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .priceLabel {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: green;
+  }
+
+  .reservationButton {
+    width: 50%;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #bf9f00;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .reservationButton:disabled {
+    background-color: #ccc;
+    cursor: default;
+  }
