@@ -27,4 +27,9 @@
 * For access to administrative features, log in using:
 * Email: admin@abv.bg
 * Password: admin
-* On the "Our Shows" page, administrative tools for adding, editing, and deleting plays from the collection are available.
+* On the "Programme" page, administrative tools for adding, editing, and deleting plays from the collection are available.
+
+#User Usage
+* The service is initialized with three users, which can be used for immediate testing:
+* peter@abv.bg : 123456
+* george@abv.bg : 123456

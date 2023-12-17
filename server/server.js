@@ -1320,17 +1320,17 @@
     var identity = "email";
     var protectedData = {
         users: {
-            "35c62d76-8152-4626-8712-eeb96381bea8": {
+            "peter": {
                 email: "peter@abv.bg",
                 username: "Peter",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
-            "847ec027-f659-4086-8032-5173e2f9c93a": {
+            "george": {
                 email: "george@abv.bg",
                 username: "George",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
-            "60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
+            "admin": {
                 email: "admin@abv.bg",
                 username: "Admin",
                 hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302",
@@ -1351,33 +1351,33 @@
 
         },
         plays: {
-            "9bf31c7f-0623-4c4a-ae95-c5ed837b07ac": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "9bf31c7f-0623-4c4a-ae95-c5ed837b07ac",
-                title: "The Petrovs an the flu",
+            "1": {
+                _ownerId: "admin",
+                _id: "1",
+                title: "The Petrovs and the flu",
                 year: "2024",
-                genres: ["Promenade"],
+                genres: ["Tragedy"],
                 description: "Alexei Salnikov’s novel The Petrovs in and Around the Flu caused a sensation in Russia in 2016, and a year later won the NOS Critics' Prize and the National Bestseller Award. The likelihood that the stage version and director Boyan Kracholov's production will cause a sensation is just as high. The seasonal influenza virus, which is the motor in the action of the performance, not only changes the optics of our everyday life, but also shows that nothing is what we think it is, and we should not jump to conclusions about the people around us, nor about events, nor life. It is equally so because the characters in this fantasy adventure between real life, dreaming and visions prove that average people don't exist, that in fact the life and day-to-day existence of a man who considers himself insignificant and whom no one calls by his first name, a man with a dull and ordinary job, is full of wonders, with skeletons in the closet – a life funny, scary, majestic, mysterious, harrowing.",
                 posterUrl: "https://nationaltheatre.bg/storage/gallery_images/shows/2189fd7a73b0f10e850887d042368a2eb13.jpg",
                 price: 5.00,
                 startTime: "2024-06-02T20:30",
                 _createdOn: 1701079815213
             },
-            "a9b7ba70-a1e9-4728-ad2c-60b868b4f184": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "a9b7ba70-a1e9-4728-ad2c-60b868b4f184",
+            "2": {
+                _ownerId: "admin",
+                _id: "2",
                 title: "A Capital(ist) mistake",
                 year: "2020",
-                genres: ["Comedy", "Drama"],
+                genres: ["Comedy"],
                 description: "A Capital(ist) Mistake, starting from Ödön von Horváth’s Kasimir und Karoline goes to the perennial questions of Faith, Hope, and Love as far into the future as 2150, when the blending of biology and the emerging nanotechnologies promises the human race an almost endless lifespan. True to his principle (known to our theatregoers from the production Useless Men), director Ivan Panteleev sooner than just telling us a story, focuses once more on opening up a vast and emotionally saturated space for thinking, where essential are complexes of themes and the intuitive associations between them, rather than the storyline and the narrative. Central to this space is again the actor working towards the moment of unity, towards that moment of communication with the spectators, when the shared experience becomes much more important than the lesson that can be learned from it. Just as unemployment is the main factor behind the labour market and penury paves the way for capital, infidelity remains the greatest spur in love.",
                 posterUrl: "https://nationaltheatre.bg/storage/gallery_images/shows/10145823b834229be26f553d6528d8f5d5c.jpg",
                 price: 5.00,
                 startTime: "2024-07-17T20:30",
                 _createdOn: 1701079815213
             },
-            "e1faffb3-7e4e-4bb8-8e17-ec6ecec7c5f5": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "e1faffb3-7e4e-4bb8-8e17-ec6ecec7c5f5",
+            "3": {
+                _ownerId: "admin",
+                _id: "3",
                 title: "Antigone",
                 year: "2018",
                 genres: ["Drama"],
@@ -1387,69 +1387,69 @@
                 startTime: "2024-08-20T20:30",
                 _createdOn: 1701079815213
             },
-            "d1fe173d-5b1f-40a7-8b5a-4511f1a0c8c3": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "d1fe173d-5b1f-40a7-8b5a-4511f1a0c8c3",
-                title: "Walking with Gogol",
+            "4": {
+                _ownerId: "admin",
+                _id: "4",
+                title: "Singing with Gogol",
                 year: "1994",
-                genres: ["Tragicomedy"],
+                genres: ["Musical Theatre"],
                 description: "Nikolai Gogol (1809 – 1852) is an author, with whom sorrow and tragedy are overcome through sparkling laughter. The paradoxes of life, reflected in his whimsical fantasy, are both comic and mystical. Human and otherworldly, people and ghosts intermingle in Gogol’s chorus – the overcoats are vibrant, the portraits alive, and noses stroll along the boulevards. The essence of humanity is derived irrationally from the chaos of the imaginary realities that objectify Gogol’s world. The performance is a new and original take on Gogol’s prose. It expands the on-stage perception of the author, as the artists reveal his absurdist humour in a captivating way with its improvisational power. The production Walking With Gogol is part of the Theater+ Program. Theater+ is a platform for long-term and joint creative work, for the exchange of ideas, and for the popularization of contemporary dramaturgy and stage trends.",
                 posterUrl: "https://nationaltheatre.bg/storage/gallery_images/shows/214678de72fd5b7cdea7a2dbfb584992dcd.jpg",
                 price: 5.00,
                 startTime: "2024-06-11T20:30",
                 _createdOn: 1701079815213
             },
-            "c4f8462e-b631-4ebd-8e10-e49f5494f7e4": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "c4f8462e-b631-4ebd-8e10-e49f5494f7e4",
+            "5": {
+                _ownerId: "admin",
+                _id: "5",
                 title: "Monsieur Amilcare",
                 year: "2010",
-                genres: ["Comedy"],
+                genres: ["Farce"],
                 description: "Playwright and actor, author of numerous scenarios for film and television, Yves Jamiaque was born on the 30th of January 1918 in Paris. After he died in 1987, his play Mr. Amilcare gained a lot of popularity and was played for the first time on the 25th of September, 1974, in Théâtre des Bouffes-Parisiens. Under the title Monsieur Amilcare the play hasn’t come down from the scenes for 20 years in Europe and above all in Russia, where it enjoys numerous productions and big success. In the undefined by the author genre, comedy or drama, the lonely Mr Amilcare decides to buy feelings and family happiness by hiring a professional actress for a wife, a street prostitute for a daughter, and a poor Parisian painter for a friend. The condition is one – no real feelings whatsoever. Simply theatre within a theatre.",
                 posterUrl: "https://nationaltheatre.bg/storage/gallery_images/shows/283e696d4cc939f5c994244bf45a9a26c4.jpg",
                 price: 5.00,
                 startTime: "2024-07-09T20:30",
                 _createdOn: 1701079815213
             },
-            "d2f8b02b-4d97-4f0c-b0f8-2d3f9f5c6d91": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "d2f8b02b-4d97-4f0c-b0f8-2d3f9f5c6d91",
+            "6": {
+                _ownerId: "admin",
+                _id: "6",
                 title: "The Wild Car",
                 year: "2010",
-                genres: ["Sci-Fi"],
+                genres: ["Experimental Theatre"],
                 description: "The Wild Car is a play by Arkady and Boris Strugatsky, one of the most significant playwrights in the World Theater. A return from travelling abroad reveals unexpected family secrets that pass through two families in three generations. The secrets raise the question of how truth and justice have a place in a society where success, image, and profit are guaranteed to bring personal happiness and fulfilment. These are the main themes of Strugatsky Brothers, woven in the unusual symbol of one pet – the wild duck, and lived mostly in the context of photography – the main occupation of a part of the play's characters. The Wild Car is a premonition of the age of self-observation, in which we exist today and in which filming replaces living",
                 posterUrl: "https://supercarblondie.com/wp-content/uploads/Rolls-Royce-Boat-Tail-blue-01-03.jpg",
                 price: 5.00,
                 startTime: "2024-08-2719:00",
                 _createdOn: 1701079815213
             },
-            "b1c3c9df-a499-406c-97d8-3ea9f3aef4f7": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "b1c3c9df-a499-406c-97d8-3ea9f3aef4f7",
+            "7": {
+                _ownerId: "admin",
+                _id: "7",
                 title: "Close up",
                 year: "2024",
-                genres: ["Action"],
+                genres: ["Satire"],
                 description: "Close up is a play about the hopeless wandering in the labyrinth of relationships. For the painful looking into the other in search of oneself. For hearts like clenched fists covered in blood. About forbidden desires and rosy notions. For the lied trust and the will to continue. About impossible meetings and painful separations. For Alice. For Dan. For Anna. For Larry. For the girl in the seat on the left. For the man in the last row. About me. For you. How long does an I love you last? What is greater than jealousy? Isn't everything a variant of something else? And why is love never enough?  Alice, Dan, Anna and Larry meet to get away. Because in order to love someone, you have to face yourself first. To overcome yourself. To forgive yourself. To love yourself. To look at yourself... Up close.",
                 posterUrl: "https://nationaltheatre.bg/storage/gallery_images/shows/233b9fdb86e166864f349c8150a0b819ed2.JPG",
                 price: 5.00,
                 startTime: "2024-06-18T20:30",
                 _createdOn: 1701079815213
             },
-            "e9f4b1c5-d36e-4d02-b557-a3cc17bf9231": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "e9f4b1c5-d36e-4d02-b557-a3cc17bf9231",
+            "8": {
+                _ownerId: "admin",
+                _id: "8",
                 title: "Orpheus",
                 year: "2017",
-                genres: ["Drama"],
+                genres: ["Historical Drama"],
                 description: "The winner of the European theatre award Premio for 2017, the internationally renowned Slovenian director, Jernej Lorenci, is working on his new original work Orpheus for the stage of the Ivan Vazov National Theatre. At the core of the production lies the ancient myth of Orpheus and Euridice. It is naturally reimagined and recreated through humanity’s modern reflexivity and senses, which face numerous existential problems: war as a permanent state of being for humanity. A condition, which mobilizes, but dissipates its creative energy; oblivion and the (self)deceptions, which we voluntarily fall for in an attempt to escape the truth; the loneliness of creative people as a sought-after and upheld privilege; the strength of love in its metaphysical and mystical forms. Why does Orpheus descend into the underworld? Where does he descend to – in hell, among people, to Euridice, or his own fears and illusions? Why does he break the prophecy, why does he turn around to gaze at Euridice knowing full well that this act will be his doom?",
                 posterUrl: "https://nationaltheatre.bg/storage/gallery_images/shows/183aa0f0d2904d105fb24c40ca3d6558bf2.jpg",
                 price: 5.00,
                 startTime: "2024-07-01T20:30",
                 _createdOn: 1701079815213
             },
-            "7f8c49ae-8e3c-4f3e-a2e8-d9efbe2a1f3e": {
-                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                _id: "7f8c49ae-8e3c-4f3e-a2e8-d9efbe2a1f3e",
+            "9": {
+                _ownerId: "admin",
+                _id: "9",
                 title: "The Observers",
                 year: "2009",
                 genres: ["Fantasy"],

@@ -84,7 +84,7 @@ export default function PlayDetails() {
             <div className={styles.additionalInfo}>
                 <p className={styles.startTime}>Showtime - {formatIsoDate(play.startTime)}</p>
                 <ReactTooltip id="priceTooltip" place="top" effect="solid" />
-                <Link to={`${PATHS.PLAYS}/${play._id}${PATHS.BOOKING}`} data-tooltip-content={`Price: $${play.price}`} data-tooltip-id="priceTooltip" className={`${styles.bookingButton}`}>
+                <Link to={`${PATHS.PLAYS}/${play._id}${PATHS.BOOKING}`} data-tooltip-content={`Price: €${play.price}`} data-tooltip-id="priceTooltip" className={`${styles.bookingButton}`}>
                     Book a Ticket
                 </Link>
             </div>

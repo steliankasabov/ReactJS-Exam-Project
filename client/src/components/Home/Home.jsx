@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import PlayCarousel from '../../components/PlayCarousel/PlayCarousel';
+import PlaysMap from '../../components/PlaysMap/PlaysMap';
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
         <p>With the addition of local food vendors and artisanal markets, the "Sofia Park Theatre Festival" becomes more than just a viewing event; it's a celebration of art, community, and the great outdoors, bringing the splendor of theatrical performances into the heart of nature.</p>
 
       </div>
+
+      <PlaysMap />
      
     </div>
   );
