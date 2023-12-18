@@ -1,3 +1,4 @@
+// Importing necessary React hooks and components
 import { useState } from 'react';
 import Spinner from '../Spinner/Spinner';
 import styles from './AddPlayAPIModal.module.css';
@@ -5,6 +6,7 @@ import { formatDateTimeForInput, genresToArray } from '../../utils/functions';
 import PlayCard from '../PlayCard/PlayCard';
 import * as playService from '../../services/playService'
 
+// AddPlayAPIModal component definition
 export default function AddPlayAPIModal({ show, onClose, onSave }) {
     const [imdbID, setImdbID] = useState('');
     const [title, setTitle] = useState('');
@@ -15,6 +17,7 @@ export default function AddPlayAPIModal({ show, onClose, onSave }) {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
+    // Function to fetch play details from an external API
     const fetchPlayDetails = async (e) => {
         try {
             e.preventDefault();
@@ -35,6 +38,7 @@ export default function AddPlayAPIModal({ show, onClose, onSave }) {
         }
     };
 
+    // Function to handle saving the new play
     const handleSave = (e) => {
         e.preventDefault();
         if (playDetails) {
@@ -60,12 +64,14 @@ export default function AddPlayAPIModal({ show, onClose, onSave }) {
         }
     };
 
+    // Conditional rendering based on the modal's state
     if (!show) return null;
 
     return (
         <div className={styles.modalBackground}>
             <div className={styles.modalContent}>
                 <form onSubmit={handleSave}>
+                    {/* Form fields for IMDb ID, title, year, price, and start time */}
                     <label>
                         <a href="https://m.imdb.com/chart/top/?ref_=nv_mv_250" target="_blank" rel="noopener noreferrer">IMDb ID:</a>
                     </label>
@@ -96,6 +102,7 @@ export default function AddPlayAPIModal({ show, onClose, onSave }) {
                         Check
                     </button>
 
+                    {/* Conditional rendering for loading spinner, play details, or error message */}
                     {isLoading ? (
                         <Spinner />
                     ) : playDetails ? (
@@ -126,6 +133,7 @@ export default function AddPlayAPIModal({ show, onClose, onSave }) {
                         className={styles.inputField}
                     />
 
+                    {/* Action buttons for canceling and saving */}
                     <div className={styles.actions}>
                         <button onClick={onClose} className={styles.cancelButton}>Cancel</button>
                         <button type="submit" className={styles.saveButton}>Save</button>

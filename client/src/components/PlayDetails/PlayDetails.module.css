@@ -15,9 +15,10 @@
 }
 
 .poster {
-    max-width: 300px;
+    max-width: 600px;
+    max-height: 600px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 80px 0;
     margin-right: 7%;
 }
 

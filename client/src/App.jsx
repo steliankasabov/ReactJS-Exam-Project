@@ -1,8 +1,15 @@
+// Importing the necessary components from 'react-router-dom' to handle routing in your application.
+// BrowserRouter as Router: A router that uses the HTML5 history API to keep your UI in sync with the URL.
+// Routes: A component that renders the first Route that matches the location.
+// Route: A component that renders some UI when its path matches the current URL.
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from 'react-router-dom';
+
+// Importing various components used in your application.
+// These components represent different pages or sections of your site.
 import Home from './components/Home/Home';
 import Plays from './components/Plays/Plays';
 import NotFound from './components/NotFound/NotFound';

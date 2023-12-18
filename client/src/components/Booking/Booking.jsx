@@ -1,3 +1,4 @@
+// Importing necessary modules and components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChair } from '@fortawesome/free-solid-svg-icons';
 import styles from './Booking.module.css';
@@ -9,21 +10,27 @@ import * as reservationService from '../../services/reservationService'
 import * as playService from '../../services/playService'
 import Spinner from '../Spinner/Spinner';
 
+// Booking component definition
 export default function Booking() {
+    // Extracting playId from the URL parameters
     const { playId } = useParams();
+    // State variables for managing the booking process
     const [price, setPrice] = useState(0);
     const [reservedSeats, setReservedSeats] = useState([]);
     const [selectedSeats, setSelectedSeats] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [totalPrice, setTotalPrice] = useState(0);
+    // useNavigate hook for programmatically navigating the user
     const navigate = useNavigate();
 
+    // useEffect hook to fetch play details (price) on component mount
     useEffect(() => {
         playService.getOne(playId)
             .then(result => setPrice(result.price))
             .catch(err => toast.error(err))
     }, [playId]);
 
+    // useEffect hook to fetch reserved seats for the play
     useEffect(() => {
         setIsLoading(true)
         const fetchReservations = async () => {
@@ -42,9 +49,13 @@ export default function Booking() {
         fetchReservations();
     }, [playId]);
 
+    // Function to check if a seat is reserved
     const isSeatReserved = (seatId) => reservedSeats.includes(seatId);
+    
+    // Function to check if a seat is selected
     const isSeatSelected = (seatId) => selectedSeats.includes(seatId);
 
+    // Function to handle seat selection
     const handleSeatClick = (seatId) => {
         if (isSeatReserved(seatId)) return;
 
@@ -75,8 +86,11 @@ export default function Booking() {
         }
     };
 
+    // Function to create the seat layout
     const createSeatLayout = () => {
         let layout = [];
+        // Looping through rows and seats to create the seat layout
+        // Each seat is a clickable icon representing a seat in the theater
         for (let row = 0; row < TOTAL_ROWS; row++) {
             let seatRow = [];
             for (let seat = 0; seat < SEATS_PER_ROW; seat++) {
@@ -98,6 +112,7 @@ export default function Booking() {
         return layout;
     };
 
+    // Function to handle reservation completion
     const handleReservation = async () => {
         try {
             const reservationData = {
@@ -117,6 +132,7 @@ export default function Booking() {
         navigate(PATHS.HOME);
     };
 
+    // Rendering the booking component
     return (
         <div className={styles.bookingContainer}>
             <div className={styles.screenLabel}>Screen</div>
