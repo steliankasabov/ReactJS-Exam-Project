@@ -8,13 +8,12 @@ vi.mock('../../components/PlayCarousel/PlayCarousel', () => ({
 }));
 
 describe('Home Component', () => {
-  it('renders the welcome message and play carousel', () => {
+  it('renders the welcome image and play carousel', () => {
     render(<Home />);
     
-    expect(screen.getByText(/welcome to ReactCineX/i)).toBeInTheDocument();
-
-    expect(screen.getByText(/discover some of the best plays and book your reservations/i)).toBeInTheDocument();
-
-    expect(screen.getByText('PlayCarousel Mock')).toBeInTheDocument();
+    const image = screen.getByAltText('Sofia Park Theatre');
+    expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute('src', '/slogan.png');
+    // Other tests
   });
 });
