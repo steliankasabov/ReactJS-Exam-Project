@@ -46,12 +46,11 @@
 * peter@abv.bg : 123456
 * george@abv.bg : 123456
 
-# Short Architecture Overview of "Sofia Park Theatre" ReactJS Exam Project
+# Overview
 
-## Introduction
+## Introduction and Project Structure
 The ReactJS Exam Project is a comprehensive web application built using ReactJS. It's structured as a full-stack application with a client-side rendered frontend and a server-side backend.
 
-## Project Structure
 The project is divided into two main directories: `client` and `server`.
 
 ### Client
