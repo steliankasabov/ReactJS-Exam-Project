@@ -45,3 +45,79 @@
 * The service is initialized with three users, which can be used for immediate testing:
 * peter@abv.bg : 123456
 * george@abv.bg : 123456
+
+# Short Architecture Overview of "Sofia Park Theatre" ReactJS Exam Project
+
+## Introduction
+The ReactJS Exam Project is a comprehensive web application built using ReactJS. It's structured as a full-stack application with a client-side rendered frontend and a server-side backend.
+
+## Project Structure
+The project is divided into two main directories: `client` and `server`.
+
+### Client
+The `client` directory houses the ReactJS frontend of the application. Key components of this directory include:
+
+- **App.jsx**: The root React component that sets up routing and global state management.
+- **index.html**: The entry HTML file.
+- **assets/styles**: Contains global CSS styles.
+- **components**: This directory has various React components organized in subfolders. Each folder contains a `.jsx` file for the component logic and a `.module.css` file for styling.
+- **contexts**: Includes React context files like `authContext.jsx` for managing global application state such as authentication.
+- **hooks**: Contains custom React hooks for shared logic across components.
+- **lib**: Library files, such as `request.js` for managing API requests.
+- **services**: Service files that handle API interactions, like `authService.js`.
+- **utils**: Utility files, including constants and helper functions.
+
+### Server
+- **server.js**: The main server file. It's likely responsible for setting up the server, defining routes, and handling requests and responses.
+
+## Core Functionalities
+
+### Authentication
+- Implemented using `authContext.jsx` in the `contexts` directory.
+- Provides login, registration, and logout functionalities.
+
+### Play Management
+- Components for managing play records are found in `components/Plays` and related subdirectories.
+- `playService.js` in the `services` directory handles API requests related to plays.
+
+### Booking and Reservations
+- Components in `components/Booking` and `components/Reservations` handle booking and reservation functionalities.
+- Associated services for managing bookings and reservations.
+
+### User Interactions
+- User reviews and favorites are managed through components in `components/ReviewArea` and `components/Favourites`.
+- Services like `reviewService.js` and `favouriteService.js` handle corresponding API requests.
+
+## Technical Details
+
+### State Management
+- Global state (e.g., authentication) is managed using React Context API.
+- Local state is managed within individual components.
+
+### Routing
+- Handled by React Router with protected routes for authenticated users.
+
+### API Integration
+- API requests are managed through service files and the `request.js` library in the `lib` directory.
+
+### Testing
+- Component tests are present in various component directories, indicating a focus on unit and integration testing.
+
+### Styling
+- CSS Modules are used for component-level styling, providing scoped and maintainable styles.
+
+## Working with the Project
+
+### Setup
+- Install dependencies in both `client` and `server` directories.
+- Environment variables and configurations may need to be set up as per project requirements.
+
+### Development
+- Run the client and server applications in their respective directories.
+- Follow established patterns for adding new components, services, or other functionalities.
+
+### Testing
+- Run predefined test scripts to ensure component and application integrity.
+
+### Deployment
+- The project can be deployed on any platform supporting Node.js for the server and a static site hosting for the client.

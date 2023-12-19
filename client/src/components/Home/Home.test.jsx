@@ -14,6 +14,5 @@ describe('Home Component', () => {
     const image = screen.getByAltText('Sofia Park Theatre');
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute('src', '/slogan.png');
-    // Other tests
   });
 });
